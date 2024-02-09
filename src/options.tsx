@@ -18,7 +18,7 @@ const Options = () => {
         setColor(items.favoriteColor);
         setLike(items.likesColor);
       }
-    );
+    )
   }, []);
 
   const saveOptions = () => {
