@@ -43,14 +43,14 @@ const Options = () => {
     <>
       <div>
         Favorite color: <select
-          value={color}
-          onChange={(event) => setColor(event.target.value)}
-        >
-          <option value="red">red</option>
-          <option value="green">green</option>
-          <option value="blue">blue</option>
-          <option value="yellow">yellow</option>
-        </select>
+        value={color}
+        onChange={(event) => setColor(event.target.value)}
+      >
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+      </select>
       </div>
       <div>
         <label>
