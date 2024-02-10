@@ -1,7 +1,9 @@
-import { fetchReach } from "./content/fetchReach";
 import { fetchCollation } from "./content/fetchCollation";
+import { watchAds } from "./content/watchAds";
+import { mutateAd } from "./content/mutateAd";
 
 console.info("Initialize Meta Ad Helper!");
 
-fetchReach(277715382000909).then((reach) => console.log(reach));
-fetchCollation("222002310979685").then((collation) => console.log(collation));
+fetchCollation("222002310979685");
+
+watchAds(mutateAd);
