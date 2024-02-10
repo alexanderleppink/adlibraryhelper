@@ -4,13 +4,12 @@ import { createFetchOptions } from "./facebookRequest";
 export async function fetchCollation(collationGroupId: string) {
   const body = createUrlEncoded({
     __a: "1",
-    lsd: "AVoz0KEv2o4",
-    "x-fb-lsd": "AVoz0KEv2o4"
+    lsd: "1",
   })
 
   return fetch(`https://www.facebook.com/ads/library/async/collation/?collation_group_id=${collationGroupId}`, createFetchOptions({
     headers: {
-      "x-fb-lsd": "AVoz0KEv2o4"
+      "x-fb-lsd": "1"
     },
     body: body,
   }))
