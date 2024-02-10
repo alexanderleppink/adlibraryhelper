@@ -17,6 +17,7 @@ export async function fetchReach(id: number) {
         isAdNotAAAEligible: false
       }),
     }),
-  })).then(response => response.json())
-    .then(data => data?.data?.ad_library_main?.ad_details?.aaa_info?.eu_total_reach);
+  })).then(response => response.json()
+    .then(data => data?.data?.ad_library_main?.ad_details?.aaa_info?.eu_total_reach)
+    .catch(async (error) => console.log('error', error, "responseData", await response.text())));
 }
