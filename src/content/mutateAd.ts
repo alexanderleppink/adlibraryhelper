@@ -11,7 +11,7 @@ function getAdId(element: Element) {
   return Number(element.textContent?.match(/\w+ ID: (\d{12,20})/)?.[1]);
 }
 
-function addReachToAd(ad: Element, reach: number) {
+function addReachToAd(ad: Element, reach: number | null) {
   const container = $(ad.querySelector(":scope > *")! as HTMLElement);
   container.css({
     display: "flex",

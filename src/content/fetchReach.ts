@@ -25,7 +25,8 @@ export async function fetchReach(id: number) {
       response.text().then((text) => {
         try {
           const data = JSON.parse(text);
-          return data.data.ad_library_main.ad_details.aaa_info.eu_total_reach;
+          return data.data.ad_library_main.ad_details.aaa_info
+            .eu_total_reach as number;
         } catch (error) {
           console.error("Error parsing response", error);
           console.error("Response", text);
@@ -34,5 +35,8 @@ export async function fetchReach(id: number) {
         }
       })
     )
-    .catch((error) => console.error("Request failed", error));
+    .catch((error) => {
+      console.error("Request failed", error);
+      return null;
+    });
 }
