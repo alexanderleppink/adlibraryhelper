@@ -28,9 +28,7 @@ export async function fetchReach(id: number) {
           return data.data.ad_library_main.ad_details.aaa_info
             .eu_total_reach as number;
         } catch (error) {
-          console.error("Error parsing response", error);
-          console.error("Response", text);
-          console.error("Status", response.status);
+          console.error("Error parsing response", error, text, response.status);
           return null;
         }
       })
