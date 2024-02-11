@@ -7,13 +7,12 @@
     "page": "options.html"
   },
   "action": {
-    "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
       "matches": [
-        "https://www.facebook.com/ads/library/*"
+        "https://www.facebook.com/ads/library/**"
       ],
       "js": [
         "js/vendor.js",

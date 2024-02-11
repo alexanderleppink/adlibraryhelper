@@ -12,11 +12,17 @@ function getAdId(element: Element) {
 }
 
 function addReachToAd(ad: Element, reach: number) {
-  const container = $(ad.querySelector(':scope > *')! as HTMLElement);
+  const container = $(ad.querySelector(":scope > *")! as HTMLElement);
   container.css({
-    display: 'flex',
+    display: "flex",
     flexDirection: "column",
     gap: 8,
   });
-  container.prepend($(`<div style="background: #1674ff; color: white; border-radius: 4px; font-weight: 500; padding: 4px 8px; margin-right: auto">${reach}</div>`));
+  container.prepend(
+    $(
+      `<div style="background: #1674ff; color: white; border-radius: 4px; font-weight: 500; padding: 4px 8px; margin-right: auto">${reach.toLocaleString(
+        "nl-NL"
+      )}</div>`
+    )
+  );
 }
