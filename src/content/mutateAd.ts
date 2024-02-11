@@ -8,7 +8,7 @@ export async function mutateAd(element: Element) {
 }
 
 function getAdId(element: Element) {
-  return Number(element.textContent?.match(/Library ID: (\d+)/)?.[1]);
+  return Number(element.textContent?.match(/\w+ ID: (\d{12,20})/)?.[1]);
 }
 
 function addReachToAd(ad: Element, reach: number) {
