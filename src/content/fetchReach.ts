@@ -29,7 +29,7 @@ export async function fetchReach(id: number) {
             ?.eu_total_reach;
         } catch (error) {
           console.error("Error parsing response", error);
-          console.error("Response", text);
+          console.error("Response", text, text.length);
           console.error("Status", response.status);
           return null;
         }

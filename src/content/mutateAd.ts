@@ -20,9 +20,9 @@ function addReachToAd(ad: Element, reach: number) {
   });
   container.prepend(
     $(
-      `<div style="background: #1674ff; color: white; border-radius: 4px; font-weight: 500; padding: 4px 8px; margin-right: auto">${reach.toLocaleString(
-        "nl-NL"
-      )}</div>`
+      `<div style="background: #1674ff; color: white; border-radius: 4px; font-weight: 500; padding: 4px 8px; margin-right: auto">${(
+        reach || 0
+      ).toLocaleString("nl-NL")}</div>`
     )
   );
 }
