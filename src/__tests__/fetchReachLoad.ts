@@ -1,4 +1,4 @@
-import { fetchReach } from "./fetchReach";
+import { fetchReach } from "../content/fetchReach";
 
 export async function fetchReachLoad(
   rounds: number,

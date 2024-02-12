@@ -1,4 +1,4 @@
-import { fetchReachLoad } from "../content/fetchReachLoad";
+import { fetchReachLoad } from "./fetchReachLoad";
 
 describe("rateLimitationTest", () => {
   test("try to hit the rate limitation", async () => {

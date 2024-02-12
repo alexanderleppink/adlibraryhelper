@@ -1,9 +1,9 @@
-import { fetchReach } from "./fetchReach";
 import $ from "jquery";
+import { fetchReachLoggedIn } from "./fetchReachLoggedIn";
 
 export async function mutateAd(element: Element) {
   const adId = getAdId(element);
-  const reach = await fetchReach(adId);
+  const reach = await fetchReachLoggedIn(adId);
   addReachToAd(element, reach);
 }
 
